@@ -1,1 +1,1 @@
-CodeControl-Client
+codecontrol-frontend
