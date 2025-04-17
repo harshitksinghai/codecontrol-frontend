@@ -1,12 +1,10 @@
-import styles from './App.module.scss';
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <p className={styles.paragraph}>
-        Hi <span>there</span> 👋
-      </p>
-    </div>
+    <main>
+        <Outlet />
+    </main>
   );
 }
 
