@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
-import App from "../App";
-import marketingRoutes from "../features/marketing/marketingRoutes";
+import App from "../App.tsx";
+import marketingRoutes from "../features/marketing/marketingRoutes.tsx";
+// import authRoutes from "../features/auth/authRoutes.tsx";
 
 const routes: RouteObject[] = [
     {
@@ -8,6 +9,7 @@ const routes: RouteObject[] = [
       element: <App /> ,
       children: [
         ...marketingRoutes,
+        // ...authRoutes,
       ]
     }
   ];
