@@ -7,7 +7,7 @@ const BACKEND_URL =
     ? import.meta.env.VITE_BACKEND_URL_PROD
     : import.meta.env.VITE_BACKEND_URL_DEV;
 
-const apiSecure = axios.create({
+const secureApi = axios.create({
     baseURL: `${BACKEND_URL}/api`,
     withCredentials: true,
     headers: {
@@ -15,7 +15,7 @@ const apiSecure = axios.create({
     },
 });
 
-apiSecure.interceptors.response.use(
+secureApi.interceptors.response.use(
     (response) => {
         return response;
       },
@@ -30,7 +30,7 @@ apiSecure.interceptors.response.use(
         //         await authApi.refreshAccessToken();
         //         console.log("worked: authApi.refreshAccessToken()");
 
-        //         return apiSecure(originalRequest); // Retry the original request
+        //         return secureApi(originalRequest); // Retry the original request
         //     } catch (refreshError) {
         //         console.error("Token refresh failed. Logging out...");
         //         window.location.href = "/login"; // Redirect to login
@@ -42,4 +42,4 @@ apiSecure.interceptors.response.use(
     }
 );
 
-export default apiSecure;
+export default secureApi;

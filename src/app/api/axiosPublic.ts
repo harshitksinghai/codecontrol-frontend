@@ -6,11 +6,11 @@ const BACKEND_URL =
     ? import.meta.env.VITE_BACKEND_URL_PROD
     : import.meta.env.VITE_BACKEND_URL_DEV;
 
-const apiPublic = axios.create({
+const publicApi = axios.create({
   baseURL: `${BACKEND_URL}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export default apiPublic;
+export default publicApi;
