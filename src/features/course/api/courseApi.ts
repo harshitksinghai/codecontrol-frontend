@@ -1,9 +1,9 @@
 import secureApi from "../../../app/api/axiosSecure";
-import { CommonResponse } from "../../common/utils/commonTypes";
+import { ExpectedCommonResponse } from "../../common/types/commonTypes";
 
 export const courseApi = {
     placeholder1: (ph: string) => 
-        secureApi.post<CommonResponse>(`/placeholder`, { ph }),
+        secureApi.post<ExpectedCommonResponse>(`/placeholder`, { ph }),
     placeholder2: (ph: string) => 
-        secureApi.post<CommonResponse>(`/placeholder`, { ph }),
+        secureApi.post<ExpectedCommonResponse>(`/placeholder`, { ph }),
 }
